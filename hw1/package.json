@@ -1,0 +1,14 @@
+{
+    "name": "nodejs-hw",
+    "version": "1.0.0",
+    "description": "first try",
+    "main": "server.js",
+    "scripts": {
+      "server": "nodemon node server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "nodemon": "^2.0.15"
+    }
+  }
