@@ -18,6 +18,19 @@ router.get('/posts', (req, res) => {
         })
 })
 
+router.get('/:id', (req, res) => {
+    const db = getDb();
+    db
+        .collection('posts')
+        .findOne(req.body)
+        .then((posts) => {
+            res.json(posts)
+        })
+        .catch((error) => {
+            res.status(400).json({ error: error.message })
+        })
+})
+
 router.post('/posts', (req, res) => {
     const db = getDb();
     db
