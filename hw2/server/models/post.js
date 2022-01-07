@@ -18,7 +18,7 @@ const schema = new Schema({
         type: mongoose.Types.ObjectId,
         ref: 'Author',
     },
-   // timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }  
+    timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }  
 })
 
 module.exports = mongoose.model('Post', schema)
