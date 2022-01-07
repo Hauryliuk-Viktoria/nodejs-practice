@@ -5,23 +5,23 @@ const bodyParser = require('body-parser');
 const router = expres.Router();
 router.use(bodyParser.json());
 
-const postsController = require('../controllers/posts');
+const postsController = require('../controllers/tags');
 
 // get all posts
-router.get('/posts', postsController.find);
+router.get('/tags', postsController.find);
 
 // get single post
-router.get('/posts/:id', postsController.findOne);
+router.get('/tags/:id', postsController.findOne);
 
 // create a new post
 // skip validators
-router.post('/posts', postsController.create);
+router.post('/tags', postsController.create);
 
 // update specific post
 // PUT and PATCH
-router.patch('/posts/:id', postsController.update);
+router.patch('/tags/:id', postsController.update);
 
 // delete specific post
-router.delete('/posts/:id', postsController.remove);
+router.delete('/tags/:id', postsController.remove);
 
 module.exports = router

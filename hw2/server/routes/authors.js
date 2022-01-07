@@ -5,23 +5,23 @@ const bodyParser = require('body-parser');
 const router = expres.Router();
 router.use(bodyParser.json());
 
-const postsController = require('../controllers/posts');
+const postsController = require('../controllers/authors');
 
 // get all posts
-router.get('/posts', postsController.find);
+router.get('/authors', postsController.find);
 
 // get single post
-router.get('/posts/:id', postsController.findOne);
+router.get('/authors/:id', postsController.findOne);
 
 // create a new post
 // skip validators
-router.post('/posts', postsController.create);
+router.post('/authors', postsController.create);
 
 // update specific post
 // PUT and PATCH
-router.patch('/posts/:id', postsController.update);
+router.patch('/authors/:id', postsController.update);
 
 // delete specific post
-router.delete('/posts/:id', postsController.remove);
+router.delete('/authors/:id', postsController.remove);
 
 module.exports = router
